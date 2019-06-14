@@ -3,6 +3,17 @@
 
 ## Setup
 
+Configure db connection through config.yaml
+
+	db_server:
+	  server: mysql
+	  host: 127.0.0.1
+	  user: root
+	  password: password
+	  db_name: votingsystem
+
+Install dependancies and initialize database 
+
 	pip install -r requirements.txt
 	python setup.py
 
@@ -48,7 +59,7 @@
 
 ## Benchmarking  
 
-The benchmark was setup as a certain no of users polling the following two endpoints 10 times each:
+The benchmark was setup using JMeter as a certain no of users polling the following two endpoints 10 times each:
 
 1. /api/constituency/ - List of constituencies
 2. /api/constituency/Ernakulam/party/ - List of parties in constituency Ernakulam
